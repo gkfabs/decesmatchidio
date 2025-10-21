@@ -42,7 +42,6 @@
 
 package ancestris.modules.gedcom.decesmatchidio;
 
-import ancestris.util.swing.DialogManager;
 import genj.util.Registry;
 import java.util.List;
 import java.util.logging.Logger;
@@ -78,7 +77,8 @@ public class SearchPanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -126,104 +126,139 @@ public class SearchPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
 
-        org.openide.awt.Mnemonics.setLocalizedText(lastNameLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastNameLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(lastNameLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastNameLabel.text")); // NOI18N
 
-        lastNameField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastNameField.text")); // NOI18N
+        lastNameField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastNameField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(firstNameLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.firstNameLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(firstNameLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.firstNameLabel.text")); // NOI18N
 
-        firstNameField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.firstNameField.text")); // NOI18N
+        firstNameField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.firstNameField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(legalNameLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.legalNameLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(legalNameLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.legalNameLabel.text")); // NOI18N
 
-        legalNameField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.legalNameField.text")); // NOI18N
+        legalNameField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.legalNameField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(sexLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.sexLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(sexLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.sexLabel.text")); // NOI18N
 
         sexComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "F", "H", "M" }));
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthDateLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDateLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthDateLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDateLabel.text")); // NOI18N
 
-        birthDateField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDateField.text")); // NOI18N
+        birthDateField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDateField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthCityLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCityLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthCityLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCityLabel.text")); // NOI18N
 
-        birthCityField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCityField.text")); // NOI18N
+        birthCityField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCityField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthLocationCodeLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthLocationCodeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthLocationCodeLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthLocationCodeLabel.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.jLabel1.text")); // NOI18N
 
-        birthLocationCodeField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthLocationCodeField.text")); // NOI18N
+        birthLocationCodeField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthLocationCodeField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthPostalCodeLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthPostalCodeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthPostalCodeLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthPostalCodeLabel.text")); // NOI18N
 
-        birthPostalCodeField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthPostalCodeField.text")); // NOI18N
+        birthPostalCodeField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthPostalCodeField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthDepartmentLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDepartmentLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthDepartmentLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDepartmentLabel.text")); // NOI18N
 
-        birthDepartmentField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDepartmentField.text")); // NOI18N
+        birthDepartmentField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthDepartmentField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(birthCountryLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCountryLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(birthCountryLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCountryLabel.text")); // NOI18N
 
-        birthCountryField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCountryField.text")); // NOI18N
+        birthCountryField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.birthCountryField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.jLabel2.text")); // NOI18N
 
-        deathDateField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDateField.text")); // NOI18N
+        deathDateField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDateField.text")); // NOI18N
 
-        deathDepartmentField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDepartmentField.text")); // NOI18N
+        deathDepartmentField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDepartmentField.text")); // NOI18N
         deathDepartmentField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deathDepartmentFieldActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathCityLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCityLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathCityLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCityLabel.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathCountryLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCountryLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathCountryLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCountryLabel.text")); // NOI18N
 
-        deathCityField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCityField.text")); // NOI18N
+        deathCityField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCityField.text")); // NOI18N
 
-        deathCountryField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCountryField.text")); // NOI18N
+        deathCountryField
+                .setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathCountryField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathLocationCodeLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathLocationCodeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathLocationCodeLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathLocationCodeLabel.text")); // NOI18N
 
-        deathLocationCodeField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathLocationCodeField.text")); // NOI18N
+        deathLocationCodeField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathLocationCodeField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathPostalCodeLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathPostalCodeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathPostalCodeLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathPostalCodeLabel.text")); // NOI18N
 
-        deathPostalCodeField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathPostalCodeField.text")); // NOI18N
+        deathPostalCodeField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathPostalCodeField.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathDateLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDateLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathDateLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDateLabel.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(deathDepartmentLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDepartmentLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(deathDepartmentLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.deathDepartmentLabel.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(lastSeenAliveLabel, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastSeenAliveLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(lastSeenAliveLabel,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastSeenAliveLabel.text")); // NOI18N
 
-        lastSeenAliveField.setText(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastSeenAliveField.text")); // NOI18N
+        lastSeenAliveField.setText(
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.lastSeenAliveField.text")); // NOI18N
         lastSeenAliveField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lastSeenAliveFieldActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(fuzzySearchCheckBox, org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.fuzzySearchCheckBox.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(fuzzySearchCheckBox,
+                org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.fuzzySearchCheckBox.text")); // NOI18N
         fuzzySearchCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fuzzySearchCheckBoxActionPerformed(evt);
             }
         });
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ancestris/modules/gedcom/decesmatchidio/Bundle"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle
+                .getBundle("ancestris/modules/gedcom/decesmatchidio/Bundle"); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(searchButton, bundle.getString("SearchPanel.searchButton.text")); // NOI18N
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -237,193 +272,302 @@ public class SearchPanel extends javax.swing.JPanel {
         });
 
         decesMatchIdsTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Firstname", "Lastname", "Birth Date", "Birth Location", "Death Date", "Death Location"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                },
+                new String[] {
+                        "Firstname", "Lastname", "Birth Date", "Birth Location", "Death Date", "Death Location"
+                }) {
+            Class[] types = new Class[] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                    java.lang.String.class, java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         decesMatchIdsTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(decesMatchIdsTable);
         if (decesMatchIdsTable.getColumnModel().getColumnCount() > 0) {
             decesMatchIdsTable.getColumnModel().getColumn(0).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(0).setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title0")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(0)
+                    .setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title0")); // NOI18N
             decesMatchIdsTable.getColumnModel().getColumn(1).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(1).setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title1")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(1)
+                    .setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title1")); // NOI18N
             decesMatchIdsTable.getColumnModel().getColumn(2).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(2).setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title2")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(2)
+                    .setHeaderValue(bundle.getString("SearchPanel.decesMatchIdsTable.columnModel.title2")); // NOI18N
             decesMatchIdsTable.getColumnModel().getColumn(3).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(3).setHeaderValue(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title3")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(3).setHeaderValue(org.openide.util.NbBundle
+                    .getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title3")); // NOI18N
             decesMatchIdsTable.getColumnModel().getColumn(4).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(4).setHeaderValue(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title4")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(4).setHeaderValue(org.openide.util.NbBundle
+                    .getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title4")); // NOI18N
             decesMatchIdsTable.getColumnModel().getColumn(5).setResizable(false);
-            decesMatchIdsTable.getColumnModel().getColumn(5).setHeaderValue(org.openide.util.NbBundle.getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title5")); // NOI18N
+            decesMatchIdsTable.getColumnModel().getColumn(5).setHeaderValue(org.openide.util.NbBundle
+                    .getMessage(SearchPanel.class, "SearchPanel.decesMatchIdsTable.columnModel.title5")); // NOI18N
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(1, 1, 1))
-                    .addComponent(searchButton)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(lastSeenAliveLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lastSeenAliveField, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(deathLocationCodeLabel)
-                                        .addComponent(deathDateLabel)
-                                        .addComponent(deathDepartmentLabel))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(deathDateField, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                                        .addComponent(deathLocationCodeField)
-                                        .addComponent(deathDepartmentField)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(lastNameLabel)
-                                                        .addComponent(birthDateLabel))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(birthLocationCodeLabel)
-                                                        .addGap(21, 21, 21)))
-                                                .addComponent(birthDepartmentLabel))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(firstNameLabel)
-                                            .addGap(18, 18, 18)))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(firstNameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addComponent(lastNameField, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(birthDateField, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(birthLocationCodeField, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(birthDepartmentField)))))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(legalNameLabel)
-                                    .addComponent(sexLabel)
-                                    .addComponent(birthCityLabel)
-                                    .addComponent(birthPostalCodeLabel)
-                                    .addComponent(birthCountryLabel)
-                                    .addComponent(deathCityLabel))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(birthPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(legalNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                        .addComponent(birthCityField))
-                                    .addComponent(birthCountryField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(deathCityField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(deathPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(deathCountryField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(deathPostalCodeLabel)
-                            .addComponent(deathCountryLabel)
-                            .addComponent(fuzzySearchCheckBox))))
-                .addGap(22, 22, 22))
-        );
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0,
+                                                        Short.MAX_VALUE)
+                                                .addGap(1, 1, 1))
+                                        .addComponent(searchButton)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel1)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                false)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout
+                                                                .createSequentialGroup()
+                                                                .addComponent(lastSeenAliveLabel)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(lastSeenAliveField,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE, 86,
+                                                                        Short.MAX_VALUE))
+                                                        .addGroup(layout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(deathLocationCodeLabel)
+                                                                                .addComponent(deathDateLabel)
+                                                                                .addComponent(deathDepartmentLabel))
+                                                                        .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                false)
+                                                                                .addComponent(deathDateField,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        101, Short.MAX_VALUE)
+                                                                                .addComponent(deathLocationCodeField)
+                                                                                .addComponent(deathDepartmentField)))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                .addGroup(layout.createSequentialGroup()
+                                                                                        .addGroup(layout
+                                                                                                .createParallelGroup(
+                                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                .addGroup(layout
+                                                                                                        .createParallelGroup(
+                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                        .addGroup(
+                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                layout.createParallelGroup(
+                                                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                        .addComponent(
+                                                                                                                                lastNameLabel)
+                                                                                                                        .addComponent(
+                                                                                                                                birthDateLabel))
+                                                                                                        .addGroup(layout
+                                                                                                                .createSequentialGroup()
+                                                                                                                .addComponent(
+                                                                                                                        birthLocationCodeLabel)
+                                                                                                                .addGap(21,
+                                                                                                                        21,
+                                                                                                                        21)))
+                                                                                                .addComponent(
+                                                                                                        birthDepartmentLabel))
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                                                                .addGroup(layout.createSequentialGroup()
+                                                                                        .addComponent(firstNameLabel)
+                                                                                        .addGap(18, 18, 18)))
+                                                                        .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                false)
+                                                                                .addComponent(firstNameField,
+                                                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        100, Short.MAX_VALUE)
+                                                                                .addComponent(lastNameField,
+                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(birthDateField,
+                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(birthLocationCodeField,
+                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(birthDepartmentField)))))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(legalNameLabel)
+                                                                        .addComponent(sexLabel)
+                                                                        .addComponent(birthCityLabel)
+                                                                        .addComponent(birthPostalCodeLabel)
+                                                                        .addComponent(birthCountryLabel)
+                                                                        .addComponent(deathCityLabel))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(birthPostalCodeField,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                100,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                false)
+                                                                                .addComponent(sexComboBox,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(legalNameField,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        100, Short.MAX_VALUE)
+                                                                                .addComponent(birthCityField))
+                                                                        .addComponent(birthCountryField,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                100,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(deathCityField,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                100,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(deathPostalCodeField,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                100,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(deathCountryField,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                100,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(deathPostalCodeLabel)
+                                                        .addComponent(deathCountryLabel)
+                                                        .addComponent(fuzzySearchCheckBox))))
+                                .addGap(22, 22, 22)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(legalNameLabel)
-                    .addComponent(legalNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(firstNameLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastNameLabel)
-                    .addComponent(sexLabel)
-                    .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(birthDateLabel)
-                    .addComponent(birthDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(birthCityLabel)
-                    .addComponent(birthCityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(birthLocationCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(birthLocationCodeLabel))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(birthPostalCodeLabel)
-                        .addComponent(birthPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(birthDepartmentLabel)
-                    .addComponent(birthDepartmentField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(birthCountryLabel)
-                    .addComponent(birthCountryField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deathDateLabel)
-                    .addComponent(deathDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deathCityLabel)
-                    .addComponent(deathCityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(deathLocationCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(deathLocationCodeLabel))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(deathPostalCodeLabel)
-                        .addComponent(deathPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deathDepartmentLabel)
-                    .addComponent(deathDepartmentField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deathCountryLabel)
-                    .addComponent(deathCountryField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lastSeenAliveLabel)
-                    .addComponent(lastSeenAliveField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fuzzySearchCheckBox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(legalNameLabel)
+                                        .addComponent(legalNameField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(firstNameLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lastNameLabel)
+                                        .addComponent(sexLabel)
+                                        .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(birthDateLabel)
+                                        .addComponent(birthDateField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(birthCityLabel)
+                                        .addComponent(birthCityField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(birthLocationCodeField,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(birthLocationCodeLabel))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(birthPostalCodeLabel)
+                                                .addComponent(birthPostalCodeField,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(birthDepartmentLabel)
+                                        .addComponent(birthDepartmentField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(birthCountryLabel)
+                                        .addComponent(birthCountryField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(deathDateLabel)
+                                        .addComponent(deathDateField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(deathCityLabel)
+                                        .addComponent(deathCityField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(deathLocationCodeField,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(deathLocationCodeLabel))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(deathPostalCodeLabel)
+                                                .addComponent(deathPostalCodeField,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(deathDepartmentLabel)
+                                        .addComponent(deathDepartmentField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(deathCountryLabel)
+                                        .addComponent(deathCountryField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lastSeenAliveLabel)
+                                        .addComponent(lastSeenAliveField, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fuzzySearchCheckBox))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(searchButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 245,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
     private void deathDepartmentFieldActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deathDepartmentFieldActionPerformed
@@ -444,16 +588,17 @@ public class SearchPanel extends javax.swing.JPanel {
 
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_SearchButtonMouseClicked
         this.decesMatchIds = DecesMatchIdClient.lookup(this.get());
-        final javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) decesMatchIdsTable.getModel();
+        final javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) decesMatchIdsTable
+                .getModel();
         model.getDataVector().removeAllElements();
         for (DecesMatchId decesMatchId : this.decesMatchIds) {
             Object[] data = {
-                decesMatchId.getFirstName(),
-                decesMatchId.getLastName(),
-                decesMatchId.getBirthDate(),
-                decesMatchId.getBirthCity() + decesMatchId.getBirthPostalCode(),
-                decesMatchId.getDeathDate(),
-                decesMatchId.getDeathCity() + decesMatchId.getDeathPostalCode()
+                    decesMatchId.getFirstName(),
+                    decesMatchId.getLastName(),
+                    decesMatchId.getBirthDate(),
+                    decesMatchId.getBirthCity() + decesMatchId.getBirthPostalCode(),
+                    decesMatchId.getDeathDate(),
+                    decesMatchId.getDeathCity() + decesMatchId.getDeathPostalCode()
             };
             model.addRow(data);
         }
@@ -573,7 +718,8 @@ public class SearchPanel extends javax.swing.JPanel {
         deathCountryField.setText(this.decesMatchId.getDeathCountry());
         lastSeenAliveField.setText(this.decesMatchId.getLastSeenAliveDate());
         fuzzySearchCheckBox.setSelected(this.decesMatchId.isFuzzy());
-        final javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) decesMatchIdsTable.getModel();
+        final javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) decesMatchIdsTable
+                .getModel();
         model.getDataVector().removeAllElements();
         this.decesMatchIds = DecesMatchIdClient.lookup(this.get());
     }

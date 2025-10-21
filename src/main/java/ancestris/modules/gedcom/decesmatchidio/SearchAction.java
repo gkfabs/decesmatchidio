@@ -15,13 +15,11 @@ import ancestris.core.actions.AbstractAncestrisContextAction;
 import ancestris.util.swing.DialogManager;
 import genj.gedcom.Entity;
 import genj.gedcom.Indi;
-import genj.gedcom.Note;
 import genj.gedcom.Property;
 import genj.gedcom.TagPath;
 import java.awt.event.ActionEvent;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
-import java.util.Properties;
 import java.util.logging.Logger;
 import org.openide.util.LookupEvent;
 import org.openide.util.NbBundle;
@@ -73,29 +71,30 @@ public class SearchAction extends AbstractAncestrisContextAction {
         DialogManager.ADialog dialog = DialogManager.create(
                 NbBundle.getMessage((Class) SearchAction.class, "SearchPanel.dialogManager.title"), searchPanel);
         if (dialog.show() == DialogManager.ADialog.OK_OPTION) {
-            DecesMatchId decesMatchIdFound = searchPanel.getSelected();
+            final DecesMatchId decesMatchIdFound = searchPanel.getSelected();
             if (decesMatchIdFound == null) {
                 return;
             }
-            Indi indi = (Indi) this.entity;
+            final Indi indi = (Indi) this.entity;
             indi.setName(decesMatchIdFound.getFirstName(), decesMatchIdFound.getLastName());
             switch (decesMatchIdFound.getSex().toString()) {
-            case "M": {
+                case "M": {
                     indi.setSex(1);
                     break;
-            }
-            case "F": {
+                }
+                case "F": {
                     indi.setSex(2);
                     break;
+                }
             }
-            }
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
+            final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
             Property birth = indi.getProperty(new TagPath("INDI:BIRT"));
             if (birth == null) {
                 birth = indi.addProperty("INDI:DEAT", "");
             }
-            String birthDate = decesMatchIdFound.getBirthLocalDate().format(formatter);
-            String birthPlace = ", " + decesMatchIdFound.getBirthCity() + ", , " + decesMatchIdFound.getBirthDepartment() + ", , " + decesMatchIdFound.getBirthCountry();
+            final String birthDate = decesMatchIdFound.getBirthLocalDate().format(formatter);
+            final String birthPlace = ", " + decesMatchIdFound.getBirthCity() + ", , "
+                    + decesMatchIdFound.getBirthDepartment() + ", , " + decesMatchIdFound.getBirthCountry();
             if (birth.getProperty("DATE") != null) {
                 birth.getProperty("DATE").setValue(birthDate);
             } else {
@@ -110,8 +109,9 @@ public class SearchAction extends AbstractAncestrisContextAction {
             if (death == null) {
                 death = indi.addProperty("INDI:DEAT", "");
             }
-            String deathDate = decesMatchIdFound.getDeathLocalDate().format(formatter);
-            String deathPlace = ", " + decesMatchIdFound.getDeathCity() + ", , " + decesMatchIdFound.getDeathDepartment() + ", , " + decesMatchIdFound.getDeathCountry();
+            final String deathDate = decesMatchIdFound.getDeathLocalDate().format(formatter);
+            final String deathPlace = ", " + decesMatchIdFound.getDeathCity() + ", , "
+                    + decesMatchIdFound.getDeathDepartment() + ", , " + decesMatchIdFound.getDeathCountry();
             if (death.getProperty("DATE") != null) {
                 death.getProperty("DATE").setValue(deathDate);
             } else {
@@ -122,13 +122,9 @@ public class SearchAction extends AbstractAncestrisContextAction {
             } else {
                 death.addProperty("PLAC", deathPlace);
             }
-            final String note = "Certificate Id: " + decesMatchIdFound.getDeathCertificateId() + "\nSource: " + decesMatchIdFound.getSource() + "\nSource Line: " + decesMatchIdFound.getSourceLine();
-            if (death.getProperty("NOTE") != null) {
-                Property currentNote = death.getProperty("NOTE");
-                currentNote.setValue(currentNote.getValue() + "\n" + note);
-            } else {
-                death.addProperty("NOTE", note);
-            }
+            final String description = "DecesMatchId: certificate: " + decesMatchIdFound.getDeathCertificateId() + ", source: "
+                + decesMatchIdFound.getSource() + ", source line: " + decesMatchIdFound.getSourceLine();
+            death.addSimpleProperty("SOUR", description, -1);
         }
     }
 }

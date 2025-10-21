@@ -18,9 +18,6 @@ import genj.gedcom.time.PointInTime;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 public class DecesMatchId implements Serializable {
 
     private String firstName;
@@ -51,6 +48,9 @@ public class DecesMatchId implements Serializable {
     private String source;
     private Integer sourceLine;
     private Boolean fuzzy;
+
+    public DecesMatchId() {
+    }
 
     public DecesMatchId(final Indi indi) {
         if (indi.getFirstNames() != null) {
@@ -104,88 +104,6 @@ public class DecesMatchId implements Serializable {
         this.fuzzy = true;
     }
 
-    private String parseStringOrArrayOfString(JSONObject json, String field, boolean onlyLastString) {
-        if (!json.has(field))
-            return null;
-        if (json.get(field) instanceof String)
-            return json.getString(field);
-        JSONArray jsonArray = json.getJSONArray(field);
-        if (onlyLastString) {
-            return jsonArray.getString(jsonArray.length() - 1);
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < jsonArray.length(); i++) {
-            if (i > 0) {
-                sb.append(", ");
-            }
-            sb.append(jsonArray.getString(i));
-        }
-        return sb.toString();
-    }
-
-    public DecesMatchId(final JSONObject person) {
-        final JSONObject name = person.getJSONObject("name");
-        this.firstName = parseStringOrArrayOfString(name, "first", false);
-        this.lastName = parseStringOrArrayOfString(name, "last", false);
-        this.legalName = parseStringOrArrayOfString(name, "legal", false);
-        switch (person.getString("sex")) {
-            case "M": {
-                this.sex = Sex.M;
-                break;
-            }
-            case "F": {
-                this.sex = Sex.F;
-                break;
-            }
-            default: {
-                this.sex = Sex.H;
-                break;
-            }
-        }
-        final JSONObject birth = person.getJSONObject("birth");
-        final String d1 = birth.getString("date");
-        this.birthDate =  d1.substring(0, 4) + "-" + d1.substring(4, 6) + "-" + d1.substring(6, 8);
-        final JSONObject birthLocation = birth.getJSONObject("location");
-        this.birthCity = parseStringOrArrayOfString(birthLocation, "city", true);
-        if (birthLocation.has("code")) {
-            this.birthLocationCode = birthLocation.getString("code");
-            this.birthPostalCode = birthLocation.getString("code");
-        }
-        if (birthLocation.has("departmentCode")) {
-            this.birthDepartment = birthLocation.getString("departmentCode");
-        }
-        this.birthCountry = birthLocation.getString("country");
-        if (birthLocation.has("latitude")) {
-            this.birthLatitude = birthLocation.getDouble("latitude");
-        }
-        if (birthLocation.has("longitude")) {
-            this.birthLongitude = birthLocation.getDouble("longitude");
-        }
-        final JSONObject death = person.getJSONObject("death");
-        final String d2 = death.getString("date");
-        this.deathDate = d2.substring(0, 4) + "-" + d2.substring(4, 6) + "-" + d2.substring(6, 8);
-        this.deathCertificateId = death.getString("certificateId");
-        JSONObject deathLocation = death.getJSONObject("location");
-        this.deathCity = parseStringOrArrayOfString(deathLocation, "city", true);
-        if (deathLocation.has("code")) {
-            this.deathLocationCode = deathLocation.getString("code");
-            this.deathPostalCode = deathLocation.getString("code");
-        }
-        if (deathLocation.has("departmentCode")) {
-            this.deathDepartment = deathLocation.getString("departmentCode");
-        }
-        this.deathCountry = deathLocation.getString("country");
-        if (deathLocation.has("latitude")) {
-            this.deathLatitude = deathLocation.getDouble("latitude");
-        }
-        if (deathLocation.has("longitude")) {
-            this.deathLongitude = deathLocation.getDouble("longitude");
-        }
-        this.source = person.getString("source");
-        this.sourceLine = person.getInt("sourceLine");
-        this.fuzzy = true;
-    }
-
     public String getFirstName() {
         return this.firstName;
     }
@@ -226,7 +144,8 @@ public class DecesMatchId implements Serializable {
         LocalDate d = null;
         try {
             d = LocalDate.parse(this.birthDate);
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
         return d;
     }
 
@@ -298,7 +217,8 @@ public class DecesMatchId implements Serializable {
         LocalDate d = null;
         try {
             d = LocalDate.parse(this.deathDate);
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
         return d;
     }
 
