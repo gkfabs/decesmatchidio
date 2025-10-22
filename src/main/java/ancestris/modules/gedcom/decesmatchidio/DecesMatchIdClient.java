@@ -84,9 +84,9 @@ public class DecesMatchIdClient {
             DecesMatchIdClient.LOG.log(Level.INFO, NbBundle.getMessage((Class) DecesMatchIdClient.class,
                     "DecesMatchIdClient.extractService.msg.aborted"));
             final String title = NbBundle.getMessage((Class) DecesMatchIdClient.class,
-                                                     "DecesMatchIdClient.extractService.title");
+                    "DecesMatchIdClient.extractService.title");
             final String msg = NbBundle.getMessage((Class) DecesMatchIdClient.class,
-                                                   "DecesMatchIdClient.extractService.msg.malfunction");
+                    "DecesMatchIdClient.extractService.msg.malfunction");
             DialogManager.createError(title, msg).show();
             return response;
         }
@@ -99,11 +99,11 @@ public class DecesMatchIdClient {
             DecesMatchIdClient.LOG.log(Level.INFO, NbBundle.getMessage((Class) DecesMatchIdClient.class,
                     "DecesMatchIdClient.extractService.msg.aborted"));
             final String title = NbBundle.getMessage((Class) DecesMatchIdClient.class,
-                                                     "DecesMatchIdClient.extractService.title");
+                    "DecesMatchIdClient.extractService.title");
             final String msg = NbBundle.getMessage((Class) DecesMatchIdClient.class,
-                                                   "DecesMatchIdClient.extractService.msg.malfunction");
+                    "DecesMatchIdClient.extractService.msg.malfunction");
             DialogManager.createError(title, msg + " " + ex.toString() + " " + ((JSONObject) jsonRoot).toString())
-                .show();
+                    .show();
             return response;
         }
         for (Object person : persons) {

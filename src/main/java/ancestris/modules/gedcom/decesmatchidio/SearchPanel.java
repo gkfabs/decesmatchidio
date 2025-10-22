@@ -721,7 +721,6 @@ public class SearchPanel extends javax.swing.JPanel {
         final javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) decesMatchIdsTable
                 .getModel();
         model.getDataVector().removeAllElements();
-        this.decesMatchIds = DecesMatchIdClient.lookup(this.get());
     }
 
     public DecesMatchId getSelected() {

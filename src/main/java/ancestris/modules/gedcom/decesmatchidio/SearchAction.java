@@ -27,7 +27,6 @@ import org.openide.util.NbBundle;
 public class SearchAction extends AbstractAncestrisContextAction {
     private static final Logger LOG = Logger.getLogger(SearchAction.class.getName());
     private Entity entity;
-    private DecesMatchId decesMatchId;
     private SearchPanel searchPanel = null;
 
     public SearchAction() {
@@ -42,7 +41,6 @@ public class SearchAction extends AbstractAncestrisContextAction {
 
     public void resultChanged(final LookupEvent ev) {
         this.entity = null;
-        this.decesMatchId = null;
         final Collection<? extends Property> props = this.lkpInfo.allInstances();
         if (!props.isEmpty()) {
             final Property prop = (Property) props.iterator().next();
@@ -50,10 +48,6 @@ public class SearchAction extends AbstractAncestrisContextAction {
                 this.entity = prop.getEntity();
             } else if (this.entity == null) {
                 this.entity = prop.getGedcom().getFirstEntity("INDI");
-            }
-            this.decesMatchId = new DecesMatchId((Indi) this.entity);
-            if (searchPanel != null) {
-                searchPanel.set(this.decesMatchId);
             }
         }
         super.resultChanged(ev);
@@ -67,7 +61,7 @@ public class SearchAction extends AbstractAncestrisContextAction {
         if (searchPanel == null) {
             searchPanel = new SearchPanel();
         }
-        searchPanel.set(this.decesMatchId);
+        searchPanel.set(new DecesMatchId((Indi) this.entity));
         DialogManager.ADialog dialog = DialogManager.create(
                 NbBundle.getMessage((Class) SearchAction.class, "SearchPanel.dialogManager.title"), searchPanel);
         if (dialog.show() == DialogManager.ADialog.OK_OPTION) {
@@ -88,42 +82,21 @@ public class SearchAction extends AbstractAncestrisContextAction {
                 }
             }
             final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
-            Property birth = indi.getProperty(new TagPath("INDI:BIRT"));
-            if (birth == null) {
-                birth = indi.addProperty("INDI:DEAT", "");
-            }
-            final String birthDate = decesMatchIdFound.getBirthLocalDate().format(formatter);
             final String birthPlace = ", " + decesMatchIdFound.getBirthCity() + ", , "
                     + decesMatchIdFound.getBirthDepartment() + ", , " + decesMatchIdFound.getBirthCountry();
-            if (birth.getProperty("DATE") != null) {
-                birth.getProperty("DATE").setValue(birthDate);
-            } else {
-                birth.addProperty("DATE", birthDate);
-            }
-            if (birth.getProperty("PLAC") != null) {
-                birth.getProperty("PLAC").setValue(birthPlace);
-            } else {
-                birth.addProperty("PLAC", birthPlace);
-            }
-            Property death = indi.getProperty(new TagPath("INDI:DEAT"));
-            if (death == null) {
-                death = indi.addProperty("INDI:DEAT", "");
-            }
-            final String deathDate = decesMatchIdFound.getDeathLocalDate().format(formatter);
+            indi.setValue(new TagPath("INDI:BIRT:DATE"), decesMatchIdFound.getBirthLocalDate().format(formatter));
+            indi.setValue(new TagPath("INDI:BIRT:PLAC"), birthPlace);
             final String deathPlace = ", " + decesMatchIdFound.getDeathCity() + ", , "
                     + decesMatchIdFound.getDeathDepartment() + ", , " + decesMatchIdFound.getDeathCountry();
-            if (death.getProperty("DATE") != null) {
-                death.getProperty("DATE").setValue(deathDate);
-            } else {
-                death.addProperty("DATE", deathDate);
+            indi.setValue(new TagPath("INDI:DEAT:DATE"), decesMatchIdFound.getDeathLocalDate().format(formatter));
+            indi.setValue(new TagPath("INDI:DEAT:PLAC"), deathPlace);
+            final String description = "DecesMatchId: certificate: " + decesMatchIdFound.getDeathCertificateId()
+                    + ", source: " + decesMatchIdFound.getSource() + ", source line: "
+                    + decesMatchIdFound.getSourceLine();
+            Property death = indi.getProperty(new TagPath("INDI:DEAT"));
+            if (death == null) {
+                death = indi.setValue(new TagPath("INDI:DEAT"), "");
             }
-            if (death.getProperty("PLAC") != null) {
-                death.getProperty("PLAC").setValue(deathPlace);
-            } else {
-                death.addProperty("PLAC", deathPlace);
-            }
-            final String description = "DecesMatchId: certificate: " + decesMatchIdFound.getDeathCertificateId() + ", source: "
-                + decesMatchIdFound.getSource() + ", source line: " + decesMatchIdFound.getSourceLine();
             death.addSimpleProperty("SOUR", description, -1);
         }
     }
