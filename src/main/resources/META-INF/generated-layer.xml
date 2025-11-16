@@ -20,4 +20,25 @@
             </folder>
         </folder>
     </folder>
+    <folder name="OptionsDialog">
+        <folder name="Extensions">
+            <file name="decesmatchid.instance">
+                <!--ancestris.modules.gedcom.decesmatchidio.DecesMatchIdOptionsPanelController-->
+                <attr methodvalue="org.netbeans.spi.options.AdvancedOption.createSubCategory" name="instanceCreate"/>
+                <attr name="controller" newvalue="ancestris.modules.gedcom.decesmatchidio.DecesMatchIdOptionsPanelController"/>
+                <attr bundlevalue="ancestris.modules.gedcom.decesmatchidio.Bundle#AdvancedOption_DisplayName_Decesmatchid" name="displayName"/>
+                <attr intvalue="205" name="position"/>
+                <attr bundlevalue="ancestris.modules.gedcom.decesmatchidio.Bundle#AdvancedOption_Keywords_Decesmatchid" name="keywords"/>
+                <attr name="keywordsCategory" stringvalue="Extensions/Decesmatchid"/>
+            </file>
+        </folder>
+        <folder name="Keywords">
+            <file name="ancestris.modules.gedcom.decesmatchidio.DecesMatchIdOptionsPanelController">
+                <!--ancestris.modules.gedcom.decesmatchidio.DecesMatchIdOptionsPanelController-->
+                <attr name="location" stringvalue="Extensions"/>
+                <attr bundlevalue="ancestris.modules.gedcom.decesmatchidio.Bundle#AdvancedOption_DisplayName_Decesmatchid" name="tabTitle"/>
+                <attr bundlevalue="ancestris.modules.gedcom.decesmatchidio.Bundle#AdvancedOption_Keywords_Decesmatchid" name="keywords-1"/>
+            </file>
+        </folder>
+    </folder>
 </filesystem>

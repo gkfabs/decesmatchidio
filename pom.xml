@@ -67,6 +67,18 @@
           <scope>system</scope>
           <systemPath>${ancestris.basedir}/platform/lib/org-openide-util-ui.jar</systemPath>
         </dependency>
+        <dependency>
+          <groupId>org.netbeans.modules.options</groupId>
+          <artifactId>api</artifactId>
+          <version>1.58</version>
+          <scope>system</scope>
+          <systemPath>${ancestris.basedir}/platform/modules/org-netbeans-modules-options-api.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-awt</artifactId>
+            <version>RELEASE270</version>
+        </dependency>
     </dependencies>
     <build>
       <plugins>

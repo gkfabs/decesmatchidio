@@ -58,8 +58,13 @@ public class DecesMatchIdClient {
 
         String json = "aborted";
         final HttpClient client = HttpClient.newHttpClient();
-        final HttpRequest request = HttpRequest.newBuilder().uri(URI.create(apiUrl))
-                .header("Content-Type", "application/json").header("Accept", "application/json")
+        HttpRequest.Builder requestBuilder = HttpRequest.newBuilder().uri(URI.create(apiUrl))
+            .header("Content-Type", "application/json").header("Accept", "application/json");
+        final String apiKey = DecesMatchIdOptions.getInstance().getApiKey();
+        if (apiKey != null && apiKey.length() > 0) {
+            requestBuilder.header("Authorization", "Bearer " + apiKey);
+        }
+        final HttpRequest request = requestBuilder
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString())).build();
         DecesMatchIdClient.LOG.log(Level.INFO,
                 NbBundle.getMessage((Class) DecesMatchIdClient.class, "DecesMatchIdClient.extractService.msg.calling"));
