@@ -2,18 +2,22 @@
 
 This is a module for ancestris to lookup individuals in your genealogy on https://deces.matchid.io/
 
-## Installation using sources
+## Generate the NetBeans Module
 
-  mvn -Dancestris.basedir=/ancestris/ clean install
+Open the project in apache NetBeans and add to the file nbproject/suite.properties the following properties:
+- suite.dir: The path to ancestris source code
+- nbplatform.custom.netbeans.dest.dir: The path to apache-netbeans
 
-## Installation using release
+Then Right click on the project and click on `Create NBM`
 
-  Copy jar file ancestris-modules-gedcom-decesmatchidio.jar to ${ancestris.basedir}/ancestris/modules/
-  Copy file config.xml to ${ancestris.basedir}/ancestris/config/Modules/ancestris-modules-gedcom-decesmatchidio.xml
-  Copy file tracking.xml to ${ancestris.basedir}/ancestris/update_tracking/ancestris-modules-gedcom-decesmatchidio.xml
+It will generate a file `build/ancestris-modules-gedcom-decesmatchidio.nbm`
 
-## Launch
+## Installation using the NetBean Module
 
-  ancestris --reload ./ancestris/modules/ancestris-modules-gedcom-decesmatchidio.jar
+- You need the file generated in the previous step or you can download
+  directly from the releases on github.
+- Launch ancestris In the menu `Options` > `Manage Plugins`
+- In the new popup window `Extensions` choose `Downloaded` tab and click on button `Add Plugins...`
+- Select the nbm file and then click on `Install` in the window `Extensions`.
 
 The new menu action is available in the 'Actions menu for INDIVIDUAL' with the label 'deces.matchid.io'

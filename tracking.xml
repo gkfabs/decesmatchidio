@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><module codename="ancestris.modules.gedcom.decesmatchidio">
-    <module_version install_time="1760660024535" last="true" origin="installer" specification_version="13.0.0">
-        <file name="config/Modules/ancestris-modules-gedcom-decesmatchidio.xml"/>
-        <file name="modules/ancestris-modules-gedcom-decesmatchidio.jar"/>
-    </module_version>
-</module>
