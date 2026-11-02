@@ -1,1 +1,7 @@
 target
+build/
+.classpath
+.classpath.old
+.factorypath
+.project
+.settings/

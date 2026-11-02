@@ -20,4 +20,4 @@ It will generate a file `build/ancestris-modules-gedcom-decesmatchidio.nbm`
 - In the new popup window `Extensions` choose `Downloaded` tab and click on button `Add Plugins...`
 - Select the nbm file and then click on `Install` in the window `Extensions`.
 
-The new menu action is available in the 'Actions menu for INDIVIDUAL' with the label 'deces.matchid.io'
+The new menu action is available in the 'Actions menu for INDIVIDUAL' with the label 'Search on deces.matchid.io'

@@ -25,10 +25,22 @@ import java.awt.event.ActionEvent;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.logging.Logger;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionReferences;
+import org.openide.awt.ActionRegistration;
 import org.openide.util.Exceptions;
 import org.openide.util.LookupEvent;
 import org.openide.util.NbBundle;
 
+@ActionID(category = "Tools", id = "ancestris.modules.gedcom.decesmatchidio.SearchAction")
+@ActionRegistration(
+        displayName = "#CTL_SearchAction",
+        iconInMenu = true,
+        lazy = false
+)
+@ActionReferences({
+    @ActionReference(path = "Ancestris/Actions/GedcomProperty", name = "SearchAction", position = 666)})
 public class SearchAction extends AbstractAncestrisContextAction {
     private static final Logger LOG = Logger.getLogger(SearchAction.class.getName());
     private Entity entity;
